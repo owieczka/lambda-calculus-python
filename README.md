@@ -97,3 +97,14 @@ You can create signed number with `SIGNED` function and providing two arguments
 
 
 DIFF -> ABS_DIFF
+
+python -m cProfile main.py
+mypy main.py
+pypy3 main.py
+
+# Ideas
+
+- Implement Integrals as pair
+- Implement Rationals as pair of Integralas
+- Implement Naturals as Binary Numbers - List of Bools
+

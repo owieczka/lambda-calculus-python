@@ -35,10 +35,10 @@ TEN = MUL(FIVE)(TWO)
 
 ISZERO = lambda a: a(lambda _: FALSE)(TRUE)
 GTE = lambda a: lambda b: ISZERO(SUB(b)(a))
-LTE = lambda a: lambda b: ISZERO(SUB(a)(b))
-GT = lambda a: lambda b: ISZERO(SUB(SUCC(b))(a))
-LT = lambda a: lambda b: ISZERO(SUB(SUCC(a))(b))
-EQ = lambda a: lambda b: AND(GTE(a)(b))(LTE(a)(b))
+LTE = lambda a: lambda b: ISZERO(SUB(a)(b))        
+GT = lambda a: lambda b: ISZERO(SUB(SUCC(b))(a))   # b>a
+LT = lambda a: lambda b: ISZERO(SUB(SUCC(a))(b))   # a<b
+EQ = lambda a: lambda b: AND(GTE(a)(b))(LTE(a)(b)) # a==b
 
 ##########################
 # Other
