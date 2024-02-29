@@ -20,13 +20,6 @@ NAT_200 = MUL(NAT_100)(NAT_2)
 #NAT_200 xxx 115s 68s
 list2 = RANGE(NAT_0)(NAT_200)
 
-########################################################
-# REMOVE_MULTIPLICATIVE_ON_N start_value=4 n=2 
-########################################################
-# 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
-#         ^   ^   ^   ^     ^     ^     ^     ^     ^ 
-# 0 1 2 3   5   7   9    11    13    15    17    19 
-########################################################
 
 REMOVE_MULTIPLICATIVE_OF_N_INTERNAL = Y(
   lambda f: lambda a: lambda n: lambda list: lambda oldlist: EMPTY(oldlist)
@@ -83,7 +76,6 @@ REMOVE_MULTIPLICATIVE_OF_N_INTERNAL2 = Y(
   )
   (TRUE)
 )
-
 
 #list5 = REMOVE_MULTIPLICATIVE_OF_N_INTERNAL(MUL(TWO)(TWO))(TWO)(LIST)(list2)
 #list5 = REVERSE(list5)
