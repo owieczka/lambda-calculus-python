@@ -17,8 +17,9 @@ DIFF = lambda a: lambda b: ADD(SUB(a)(b))(SUB(b)(a))
 # Numbers
 ##########################
 ZERO = FALSE # lambda f: lambda x: x
-#ZERO.__name__ = "ZERO"
+ZERO.__name__ = "ZERO"
 ONE = IDENTYTY # lambda f: lambda x: f(x)
+ONE.__name__ = "ONE"
 TWO = lambda f: lambda x: f(f(x))
 THREE = lambda f: lambda x: f(f(f(x)))
 FOUR = SUCC(THREE)   # lambda f: lambda x: f(f(f(f(x))))
