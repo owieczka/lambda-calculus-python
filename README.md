@@ -105,6 +105,8 @@ pypy3 main.py
 # Ideas
 
 - Implement Integrals as pair
+  - missing div
 - Implement Rationals as pair of Integralas
 - Implement Naturals as Binary Numbers - List of Bools
+  - 
 

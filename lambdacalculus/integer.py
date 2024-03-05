@@ -1,6 +1,7 @@
 from .bool import TRUE, FALSE, IDENTYTY, AND
 from .natural import ZERO, ONE, TWO
 from .natural import SUCC, ADD, MUL, SUB, POW
+from .natural import MAX
 from .natural import GTE, LTE, GT, LT, EQ
 from .natural import decode_natural
 from .aritmetic import EVEN, ODD
@@ -31,6 +32,9 @@ INT_NEG = lambda n: CONS(CDR(n))(CAR(n))         #-n = -(n_n - n_m) = (n_m - n_n
 #DIFF = lambda a: lambda b: ADD(SUB(a)(b))(SUB(b)(a))
 
 INT_NORMALIZE = lambda n: CONS(SUB(CAR(n))(CDR(n)))(SUB(CDR(n))(CAR(n))) # n = (n_n - n_m) = ((n_n-n_m) - 0) = (0 - (n_m-n_n))
+
+INT_ABS_NAT = lambda n: MAX(SUB(CAR(n))(CDR(n)))(SUB(CDR(n))(CAR(n))) # |n| in natural numbers
+INT_ABS = lambda n: CONS(INT_ABS_NAT(n))(ZERO) # |n| in integer numbers
 
 # ONLY  a^b if b>0
 INT_POW = lambda a: lambda b: (
